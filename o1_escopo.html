@@ -4,9 +4,28 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Escopo Javascript</title>
 </head>
 <body>
-    
+    <script>
+        console.log(name) // Funcionará pois o javascript faz o hosting do var e das functions
+        var name = "mayvon"
+        var name = "batista"
+        var name = "alces"
+        //console.log(name2) // Não funcionará pois não fará os hostingo do let
+        let name2 = "outros"
+        //console.log(car) // Não funcionará pois não fará os hostingo do const
+        const car = {
+            name: "Carro",
+            color: "Verde"
+        }
+        console.log(car)
+        car.color = "Preto"
+        console.log(car)
+        Object.freeze(car) // Congela o objeto
+        car.name = "Será ignorado"
+        console.log(car)
+
+    </script>
 </body>
 </html>
