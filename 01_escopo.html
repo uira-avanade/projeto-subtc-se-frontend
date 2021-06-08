@@ -8,13 +8,13 @@
 </head>
 <body>
     <script>
-        console.log(name) // Funcionará pois o javascript faz o hosting do var e das functions
+        console.log(name) // Funcionará pois o javascript faz o hoisting do var e das functions
         var name = "mayvon"
         var name = "batista"
         var name = "alces"
-        //console.log(name2) // Não funcionará pois não fará os hostingo do let
+        //console.log(name2) // Não funcionará pois não fará os hoisting do let
         let name2 = "outros"
-        //console.log(car) // Não funcionará pois não fará os hostingo do const
+        //console.log(car) // Não funcionará pois não fará os hoisting do const
         const car = {
             name: "Carro",
             color: "Verde"
@@ -25,7 +25,6 @@
         Object.freeze(car) // Congela o objeto
         car.name = "Será ignorado"
         console.log(car)
-
     </script>
 </body>
 </html>
