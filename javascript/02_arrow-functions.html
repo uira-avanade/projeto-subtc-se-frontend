@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrow functions</title>
+</head>
+<body>
+    <button class="btn" type="button">Click me</button>
+    <button class="btn2" type="button">Click me</button>
+    <script>
+        const btn = document.querySelector(".btn")
+        btn.addEventListener('click', function(event) {
+            console.log(this)
+        }) // this é o button
+        const btn2 = document.querySelector(".btn2")
+        btn2.addEventListener('click', (event) => {
+            console.log(this)
+        }) // this é o elemento global
+    </script>
+</body>
+</html>

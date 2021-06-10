@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrow Functions</title>
+</head>
+<body>
+    <script>
+        const sum1 = (n1, n2) => n1 + n2
+        const sum2 = (n1, n2) => {
+            return n1 + n2
+        }
+        function sum3(n1, n2) {
+            return n1 + n2
+        }
+        // As 3 funções fazem a mesma coisa
+        console.log(sum1(1, 3))
+        console.log(sum2(1, 3))
+        console.log(sum3(1, 3))
+        // Quando tem apenas 1 argumento não é necessário os parenteses
+        const sum2To = n1 => sum1(n1, 2)
+        console.log(sum2To(3))
+    </script>
+</body>
+</html>

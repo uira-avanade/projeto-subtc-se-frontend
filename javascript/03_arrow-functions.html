@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrow Functions</title>
+</head>
+<body>
+    <script>
+        const values = {
+            fisrtNumber: 10,
+            secondNumber: 20,
+            showValues: function() {
+                console.log(`Primeiro numero ${this.fisrtNumber} Segundo numero ${this.secondNumber}`);
+            },
+            callShowValues: function() {
+                window.setTimeout(function() {
+                    this.showValues() // não funcionará pois o this nesse contexto não será mais 
+                                      // o values e sim o window que chamou o settimeout
+                }, 2000)
+            },
+            callShowValuesArrow: function() {
+                window.setTimeout(() => {
+                    this.showValues() // funcionará pois o this nesse contexto será o values
+                                      // pois com arrow o this é sempre o contexto aonde 
+                                      // foi escrita a função
+                }, 2000)
+            }
+        }
+        values.callShowValuesArrow();
+        values.callShowValues();
+    </script>
+</body>
+</html>
