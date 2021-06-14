@@ -10,7 +10,7 @@
     <script>
         const numbers = [1, 2, 3, 4, 5]
 
-        console.log([...numbers, 6, 7, 8])
+        console.log([...numbers, 6, 7, 8]) //spread operator(desmembra o array)
 
         const name = "Nome"
 
@@ -24,12 +24,25 @@
 
         console.log(sum(...numbers2))
 
-        function multiply(...numbers) {
+        function multiply(...numbers) { // rest operator(monta o array)
             const arr = numbers.map(number => number * 2)
             return arr
         }
 
         console.log(multiply(1,2,3,4,5))
+
+        const obj1 = {
+            prop1: "P1",
+            prop2: "P21"
+        }
+
+        const obj2 = {
+            prop2: "P2"
+        }
+
+        const joinObj = {...obj1, ...obj2}
+
+        console.log(joinObj)
 
     </script>
 </body>
