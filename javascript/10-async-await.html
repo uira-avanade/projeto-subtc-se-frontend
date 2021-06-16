@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async Await</title>
+</head>
+<body>
+    <script>
+        async function getRepo() {
+            try {
+                const repository = await fetch('https://api.github.com/users/mayconbalves/repos?perpage=50')
+                const data = await repository.json()
+                console.log(data)
+            }
+            catch(err) {
+                console.log(err)
+            }
+        }
+
+        getRepo()
+        // Vou pular o exemplo 11 pois é igual a esse
+    </script>
+</body>
+</html>
